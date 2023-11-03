@@ -1,1 +1,0 @@
-# zekiabdurahman.github.io
