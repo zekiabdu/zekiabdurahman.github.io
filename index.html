@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="contact form example">
 
   <title>Zeki Abdurahman's Portfolio</title>
   <meta content="" name="description">
@@ -475,49 +477,62 @@
     <!-- ======= Contact Section ======= -->
 
     <!-- ======= Contact Section ======= -->
-    <title>Contact Form</title>
- <div style="max-width:500px;padding:30px">
-        <div id="fcf-form">
-            <form class="fcf-form-class" id="freeversion" method="post" action="fcf-assets/fcf.process.php">
+ <h2 class="content-head is-center">Contact Us!</h2>
 
-                <div class="field">
-                    <label for="Name" class="label has-text-weight-normal">Your name</label>
-                    <div class="control">
-                        <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100"
-                            data-validate-field="Name">
-                    </div>
-                </div>
-                <div class="field">
-                    <label for="Email" class="label has-text-weight-normal">Your email address</label>
-                    <div class="control">
-                        <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100"
-                            data-validate-field="Email">
-                    </div>
-                </div>
-                <div class="field">
-                    <label for="Message" class="label has-text-weight-normal">Your message</label>
-                    <div class="control">
-                        <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
-                        data-validate-field="Message"></textarea>
-                    </div>
-                </div>
-                <div id="fcf-status" class="fcf-status"></div>
-                <div class="field">
-                    <div class="buttons">
-                        <button id="fcf-button" type="submit" class="button is-link is-medium">Send Message</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div id="fcf-thank-you" style="display:none">
-            <!-- Thank you message goes below -->
-            <strong>Thank you</strong>
-            <p>Thanks for contacting us, we will get back in touch with you soon.</p>
-            <!-- Thank you message goes above -->
-        </div>
+<!-- START HERE -->
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Style The Contact Form How Ever You Prefer -->
+   <link rel="stylesheet" href="style.css">
+
+  <form class="gform" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbyWnBAFTf6jS6gbmMvmhfnQLjY58CKn64omWtLvT5yq5FwPiIYCx-zoadpWkxJzvlc/exec">
+    <!-- change the form action to your script url -->
+
+    <div class="form-elements">
+      <fieldset class="pure-group">
+        <label for="name">Name: </label>
+        <input id="name" name="name" placeholder="What your Mom calls you" />
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="message">Message: </label>
+        <textarea id="message" name="message" rows="10"
+        placeholder="Tell us what's on your mind..."></textarea>
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="email"><em>Your</em> Email Address:</label>
+        <input id="email" name="email" type="email" value=""
+        required placeholder="your.name@email.com"/>
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="color">Favourite Color: </label>
+        <input id="color" name="color" placeholder="green" />
+      </fieldset>
+
+      <fieldset class="pure-group honeypot-field">
+        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+        <input id="honeypot" type="text" name="honeypot" value="" />
+      </fieldset>
+
+      <button class="button-success pure-button button-xlarge">
+        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
     </div>
-    <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
-    <script src="fcf-assets/js/fcf.form.js"></script>
+
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div class="thankyou_message" style="display:none;">
+      <h2><em>Thanks</em> for contacting us!
+        We will get back to you soon!</h2>
+    </div>
+
+  </form>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+
+  <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+<!-- END -->
     <!-- ======= Contact Section ======= -->
   </main><!-- End #main -->
 
